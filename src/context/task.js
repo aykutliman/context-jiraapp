@@ -7,19 +7,17 @@ const TasksContext = createContext();
 function Provider({ children }) {
   const [tasks, setTasks] = useState([]);
   const createTask = async (title, taskDesc) => {
-    debugger;
     const response = await axios.post("http://localhost:3004/tasks", {
       title,
       taskDesc,
     });
-    console.log(response);
+
     const createdTask = [...tasks, response.data];
     setTasks(createdTask);
   };
 
   const fetchTasks = async () => {
     const response = await axios.get("http://localhost:3004/tasks");
-    debugger;
     setTasks(response.data);
   };
   const deleteTaskById = async (id) => {

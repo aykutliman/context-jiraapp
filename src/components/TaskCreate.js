@@ -18,9 +18,7 @@ function TaskCreate({ task, taskformUpdate, onUpdate }) {
     event.preventDefault();
     if (taskformUpdate) {
       onUpdate(task.id, title, taskDesc);
-      // editTaskById(task.id, title, taskDesc);
     } else {
-      // onCreate(title, taskDesc);
       createTask(title, taskDesc);
     }
 

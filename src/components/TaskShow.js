@@ -7,7 +7,6 @@ function TaskShow({ task }) {
   const { deleteTaskById, editTaskById } = useContext(TasksContext);
   const [showEdit, setShowEdit] = useState(false);
   const handleDeleteClick = () => {
-    // onDelete(task.id);
     deleteTaskById(task.id);
   };
 
@@ -17,11 +16,9 @@ function TaskShow({ task }) {
 
   const handleSubmit = (id, updatedTitle, updatedTaskDesc) => {
     setShowEdit(false);
-    // onUpdate(id, updatedTitle, updatedTaskDesc);
     editTaskById(id, updatedTitle, updatedTaskDesc);
   };
 
-  // console.log(task);
   return (
     <div className="task-show">
       {showEdit ? (

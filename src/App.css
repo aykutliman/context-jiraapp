@@ -1,38 +1,100 @@
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-create {
+    width: 450px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-update {
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.task-form {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.task-label {
+    margin: 10px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-input {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: border 0.3 ease-in-out;
+}
+
+.task-input:focus {
+    border: 1px solid red;
+    outline: none;
+}
+
+.task-button {
+    border: 1px solid green;
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.update-button {
+    background-color: blueviolet;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.task-show {
+    border: 1px solid green;
+    border-radius: 30px;
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.task-show:hover {
+    transform: scale(1.05);
+}
+
+.task-title {
+    margin-bottom: 5px;
+}
+
+.task-edit {
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: blue;
+    width: 100px;
+    color: white;
+    margin-right: 10px;
+}
+
+.task-delete {
+    padding: 5px;
+    font-size: 15px;
+    width: 100px;
+    border: none;
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    margin-right: 10px;
 }
